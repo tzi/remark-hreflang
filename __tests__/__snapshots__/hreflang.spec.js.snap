@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hreflang renders a link with a four digits lang 1`] = `"<p>I love <a href=\\"https://www.canada.ca/fr.html\\" hreflang=\\"fr_ca\\">Canada</a>!</p>"`;
+
+exports[`hreflang renders a link with a two digits lang 1`] = `"<p>I use this plugin on <a href=\\"https://tzi.fr\\" hreflang=\\"fr\\">my own website</a>, because I mix several languages on it!</p>"`;
+
+exports[`hreflang renders a link with an invalid lang format 1`] = `"<p>The <a href=\\"https://www.6play.fr/kaamelott-p_888\\">Kaamelott TV shows (Celtes)</a> is really fun.</p>"`;

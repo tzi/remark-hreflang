@@ -1,0 +1,47 @@
+{
+  "name": "remark-hreflang",
+  "version": "1.0.0",
+  "description": "This remark plugin parses custom Markdown syntax to provides hreflang attributes on links.",
+  "main": "dist/hreflang.js",
+  "scripts": {
+    "build": "cross-env BABEL_ENV=production babel src --out-dir dist",
+    "format": "prettier --write src/* __tests__/*",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzi/remark-hreflang.git"
+  },
+  "keywords": [
+    "markdown",
+    "remark",
+    "hreflang"
+  ],
+  "files": [
+    "LICENSE.md",
+    "dist",
+    "README.md"
+  ],
+  "author": "Thomas Zilliox <https://tzi.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tzi/remark-hreflang/issues"
+  },
+  "homepage": "https://github.com/tzi/remark-hreflang#readme",
+  "dependencies": {
+    "unist-util-select": "^1.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.1.6",
+    "dedent": "^0.7.0",
+    "jest": "^23.1.0",
+    "prettier": "^1.13.4",
+    "rehype-stringify": "^3.0.0",
+    "remark-parse": "^5.0.0",
+    "remark-rehype": "^3.0.0",
+    "unified": "^7.0.0"
+  }
+}
