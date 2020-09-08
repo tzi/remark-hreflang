@@ -20,7 +20,7 @@ describe("hreflang", function() {
       I use this plugin on [my own website (fr)](https://tzi.fr), because I mix several languages on it!
     `);
 
-    expect(contents).toMatchSnapshot();
+    expect(contents).toMatch(`<p>I use this plugin on <a href="https://tzi.fr" hreflang="fr">my own website</a>, because I mix several languages on it!</p>`);
   });
 
   it("renders a link with a four digits lang", () => {
@@ -28,7 +28,7 @@ describe("hreflang", function() {
       I love [Canada (fr_ca)](https://www.canada.ca/fr.html)!
     `);
 
-    expect(contents).toMatchSnapshot();
+    expect(contents).toMatch('<p>I love <a href="https://www.canada.ca/fr.html" hreflang="fr_ca">Canada</a>!</p>');
   });
 
   it("renders a link with an invalid lang format", () => {
@@ -36,7 +36,7 @@ describe("hreflang", function() {
       The [Kaamelott TV shows (Celtes)](https://www.6play.fr/kaamelott-p_888) is really fun. 
     `);
 
-    expect(contents).toMatchSnapshot();
+    expect(contents).toMatch(`<p>The <a href="https://www.6play.fr/kaamelott-p_888">Kaamelott TV shows (Celtes)</a> is really fun.</p>`);
   });
 
   it("renders a link with a reference for URL", () => {
@@ -46,6 +46,6 @@ describe("hreflang", function() {
       [reference]: https://example.com
     `);
 
-    expect(contents).toMatchSnapshot();
+    expect(contents).toMatch(`<p>Did you get this <a href="https://example.com" hreflang="fr">reference</a>?</p>`);
   });
 });
