@@ -4,7 +4,7 @@ const pattern = new RegExp(" \\(([a-z]{2}(_[a-z]{2}|))\\)$", "i");
 
 function plugin() {
   return function transformer(ast) {
-    select(ast, "link").forEach(node => {
+    select(ast, "link,linkReference").forEach(node => {
       if (!node.children) {
         return;
       }

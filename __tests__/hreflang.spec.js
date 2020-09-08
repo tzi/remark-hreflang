@@ -38,4 +38,14 @@ describe("hreflang", function() {
 
     expect(contents).toMatchSnapshot();
   });
+
+  it("renders a link with a reference for URL", () => {
+    const {contents} = render(dedent`
+      Did you get this [reference (fr)][reference]?
+
+      [reference]: https://example.com
+    `);
+
+    expect(contents).toMatchSnapshot();
+  });
 });
