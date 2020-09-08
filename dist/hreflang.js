@@ -6,11 +6,11 @@ var _unistUtilSelect2 = _interopRequireDefault(_unistUtilSelect);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var pattern = new RegExp(" \\(([a-z]{2}(_[a-z]{2})?)\\)$", "gi");
+var pattern = new RegExp(" \\(([a-z]{2}(_[a-z]{2}|))\\)$", "i");
 
 function plugin() {
   return function transformer(ast) {
-    (0, _unistUtilSelect2.default)(ast, "link").forEach(function (node) {
+    (0, _unistUtilSelect2.default)(ast, "link,linkReference").forEach(function (node) {
       if (!node.children) {
         return;
       }
