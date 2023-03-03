@@ -37,7 +37,7 @@
     "babel-preset-env": "^1.7.0",
     "cross-env": "^5.1.6",
     "dedent": "^0.7.0",
-    "jest": "^23.1.0",
+    "jest": "^29.4.3",
     "prettier": "^1.13.4",
     "rehype-stringify": "^3.0.0",
     "remark-parse": "^5.0.0",
